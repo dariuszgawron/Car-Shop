@@ -52,7 +52,7 @@ textarea {
 }
 
 body {
-    margin: 0;
+    margin: 3.5rem 0 0;
     background-color: var(--background-color);
     color: var(--text-color-dark);
     transition: .5s;
@@ -232,6 +232,7 @@ button {
 }
 
 .home__container {
+    display: grid;
     position: relative;
     row-gap: 2rem;
 }
@@ -261,12 +262,14 @@ button {
 }
 
 .about__container {
+    display: grid;
     row-gap: 2rem;
 }
 
 .about__img {
-    justify-self: center;
-    width: 260px;
+    /* justify-self: center; */
+    /* width: 260px; */
+    width: 100%;
 }
 
 .about__data {
@@ -294,17 +297,22 @@ button {
 
 .products__card {
     position: relative;
-    padding: 1.25rem 0;
+    padding: 1.25rem .5rem;
     text-align: center;
     background-color: #fff;
     border: 1px solid var(--border-color);
     transition: .4s;
 }
 
+.products__card:hover {
+    box-shadow: 0 6px 30px hsl(0, 4%, 15%, .2);
+}
+
 .products__img {
     max-width: 90%;
-    height: 80px;
+    height: 100px;
     margin-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 .products__data {
@@ -315,11 +323,11 @@ button {
     margin-bottom: .5rem;
     text-transform: uppercase;
     font-size: var(--font-size-6);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-bold);
 }
 
 .products__year {
-
+    font-size: var(--font-size-6);
 }
 
 .products__price {
@@ -375,12 +383,55 @@ button {
     font-size: var(--font-size-6);
 }
 
+.testimonial-swiper {
+    margin-left: initial;
+    margin-right: initial;
+    
+}
+
+.testimonial-swiper__button-next,
+.testimonial-swiper__button-prev {
+    width: initial;
+    height: initial;
+    top: initial;
+    bottom: 5%;
+    padding: .25rem;
+    font-size: 1.5rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 4px rgba(163, 163, 163, 0.733);
+}
+
+.testimonial-swiper__button-next::after,
+.testimonial-swiper__button-prev::after {
+    content: '';
+}
+
+.testimonial-swiper__button-next {
+    right: initial;
+    left: 4rem;
+}
+
 .testimonial__images {
     position: relative;
+    max-width: 400px;
+    height: 280px;
+    margin: 0 auto;
 }
 
 .testimonial__img {
+    width: 250px;
+    position: absolute;
+}
 
+.testimonial__img:first-child {
+    top: 0rem;
+    left: 0rem;
+}
+
+.testimonial__img:nth-child(2) {
+    bottom: 0rem;
+    right: 0rem;
 }
 
 /* CONTACT */
