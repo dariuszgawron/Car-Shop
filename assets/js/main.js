@@ -59,3 +59,28 @@ const testimonialSwiper = new Swiper(".testimonial-swiper", {
         prevEl: ".testimonial-swiper__button-prev"
     }
 })
+
+// DARK/LIGHT MODE
+const changeThemeBtn = document.getElementById('change-mode');
+const darkModeClass = 'dark-mode';
+const iconDarkMode = 'ri-sun-line';
+const iconLightMode = 'ri-moon-line';
+// Get local sets
+const initialMode = localStorage.getItem('selected-mode') || 'light';
+// Get current sets
+const selectedMode = () => document.body.classList.contains(darkModeClass) ? 'dark' : 'light';
+// Set initial class and icon for dark mode
+if(initialMode!=='light') {
+    document.body.classList.add(darkModeClass);
+    changeThemeBtn.classList.remove(iconLightMode);
+    changeThemeBtn.classList.add(iconDarkMode);
+} 
+// Change light/dark mode
+const switchMode = () => {
+    document.body.classList.toggle(darkModeClass);
+    changeThemeBtn.classList.toggle(iconDarkMode);
+    changeThemeBtn.classList.toggle(iconLightMode);
+    // Save current state
+    localStorage.setItem('selected-mode', selectedMode());
+}
+changeThemeBtn.addEventListener('click',switchMode);
