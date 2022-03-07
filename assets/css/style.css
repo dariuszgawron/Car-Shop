@@ -22,7 +22,8 @@
     --secondary-color: hsl(44, 94%, 43%);
     --text-color-dark: hsl(206, 4%, 42%);
     --text-color-light: hsl(206, 4%, 75%);
-    --background-color: hsl(206, 4%, 97%);
+    --background-color: hsl(0, 0%, 95%);
+    --element-color: hsl(0, 0%, 98%);
     --heading-color: hsl(206, 12%, 12%);
     --border-color: hsl(0, 0%, 91%);
     --color-light: #FFF;
@@ -89,6 +90,7 @@ button {
     --text-color-dark: hsl(206, 4%, 82%);
     --text-color-light: hsl(206, 4%, 75%);
     --background-color: hsl(206, 4%, 17%);
+    --element-color: hsl(0, 0%, 27%);
     --heading-color: hsl(206, 12%, 92%);
     --border-color: hsl(0, 0%, 21%);
     --color-light: #FFF;
@@ -319,7 +321,7 @@ button {
     position: relative;
     padding: 1.25rem .5rem;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--element-color);
     border: 1px solid var(--border-color);
     transition: .4s;
 }
@@ -395,7 +397,7 @@ button {
 }
 
 .testimonial__profile-name {
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-5);
     font-weight: var(--font-weight-medium);
     color: var(--title-color);
 }
@@ -552,7 +554,7 @@ button {
 
 .footer__title {
     margin-bottom: 2rem;
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-4);
     color: #fff;
 }
 
@@ -570,12 +572,13 @@ button {
 
 .footer__subtitle {
     margin-bottom: .75rem;
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
     color: #fff;
 }
 
 .footer__description {
     margin-bottom: .75rem;
+    font-size: var(--font-size-6);
 }
 
 .footer__newsletter {
@@ -585,7 +588,7 @@ button {
 
 .footer__input {
     width: 70%;
-    padding: .75rem;
+    padding: .5rem;
     border-radius: .25rem;
     border: none;
     outline: none;
@@ -596,7 +599,7 @@ button {
     display: inline-flex;
     padding: .5rem;
     border-radius: .25rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: var(--primary-color);
 }
 
@@ -609,6 +612,7 @@ button {
 }
 
 .footer__info {
+    font-size: var(--font-size-6);
 }
 
 .footer__icon {
@@ -628,7 +632,7 @@ button {
     justify-content: center;
     column-gap: 1.5rem;
     margin-bottom: 1.5rem;
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-4);
 }
 
 .footer__social-link {
@@ -642,7 +646,7 @@ button {
 }
 
 .footer__copy {
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-5);
 }
 
 /* SCROLL UP */
